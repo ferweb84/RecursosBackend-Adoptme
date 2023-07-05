@@ -12,9 +12,7 @@ import sessionsRouter from "./routes/sessions.router.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const connection = mongoose.connect(
-  `mongodb+srv://leonidas:od9a3mpDaIokUo3P@cluster0.1k06imr.mongodb.net/adoptme?retryWrites=true&w=majority`
-);
+const connection = mongoose.connect("TU URL DE MONGO");
 
 const swaggerOptions = {
   definition: {
