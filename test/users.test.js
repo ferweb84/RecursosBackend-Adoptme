@@ -4,7 +4,7 @@ import Assert from "assert";
 
 const assert = Assert.strict;
 
-mongoose.connect("TU URL DE MONGO");
+mongoose.connect("PEGA AQUÍ LA URL DE TU BD");
 
 let mockUser = {
   first_name: "Coder",
@@ -20,7 +20,6 @@ describe("Probando User DAO", () => {
 
   beforeEach(function () {
     mongoose.connection.collections.users.drop();
-    this.timeout(5000);
   });
 
   it("El Dao debe retornar los usuarios en un array", async function () {
