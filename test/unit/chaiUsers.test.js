@@ -17,6 +17,7 @@ describe("Set de pruebas del modulo de usuarios con Chai", () => {
     mongoConnect();
     this.usersDao = new Users();
   });
+
   beforeEach(function () {
     mongoose.connection.collections.users.drop();
   });
