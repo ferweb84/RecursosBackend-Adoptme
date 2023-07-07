@@ -1,5 +1,5 @@
 import chai from "chai";
-import { createHash, passwordValidation } from "../src/utils/index.js";
+import { createHash, passwordValidation } from "../../src/utils/index.js";
 
 const expect = chai.expect;
 
