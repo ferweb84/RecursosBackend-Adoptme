@@ -1,20 +1,20 @@
-import mongoose from "mongoose";
-import Users from "../src/dao/Users.dao.js";
 import Assert from "assert";
+import mongoose from "mongoose";
+import { config } from "../../src/config.js";
+import Users from "../../src/dao/Users.dao.js";
 
 const assert = Assert.strict;
 
-mongoose.connect("PEGA AQUÍ LA URL DE TU BD");
-
-let mockUser = {
-  first_name: "Coder",
-  last_name: "House",
-  email: "prueba@correo.com",
-  password: "123",
-};
-
 describe("Probando User DAO", () => {
+  let mockUser = {
+    first_name: "Coder",
+    last_name: "House",
+    email: "prueba@correo.com",
+    password: "123",
+  };
+
   before(function () {
+    mongoose.connect(config.dbUrl);
     this.usersDao = new Users();
   });
 
